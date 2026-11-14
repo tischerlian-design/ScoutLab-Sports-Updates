@@ -1,10 +1,10 @@
-﻿# ScoutLab Sports 0.8.1 – lokaler App- und GitHub-Updatehelfer
+﻿# ScoutLab Sports 0.8.3 – lokaler App- und GitHub-Updatehelfer
 # Bindet ausschließlich an 127.0.0.1. Erlaubt nur fest definierte Sportdaten-Endpunkte.
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $port = 8765
 $updateToken = [Guid]::NewGuid().ToString('N')
-$appVersion = '0.8.1'
+$appVersion = '0.8.3'
 $updateConfigPath = Join-Path $root 'update_config.json'
 $versionPath = Join-Path $root 'version.json'
 $progressPath = Join-Path $root '.update-progress.json'
@@ -20,7 +20,7 @@ try {
 
 $http = [System.Net.Http.HttpClient]::new()
 $http.Timeout = [TimeSpan]::FromSeconds(22)
-$http.DefaultRequestHeaders.UserAgent.ParseAdd('ScoutLabSports/0.8.1 (local Windows app helper)')
+$http.DefaultRequestHeaders.UserAgent.ParseAdd('ScoutLabSports/0.8.3 (local Windows app helper)')
 $listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Loopback, $port)
 
 function Send-Response {
@@ -114,7 +114,7 @@ function Invoke-RemoteUpdate {
     try {
         $remoteVersion = [version]$info.latestVersion
         $localVersion = [version]$info.currentVersion
-    } catch { throw 'Versionsnummer im Update-Manifest ist ungültig. Verwende z. B. 0.8.1.' }
+    } catch { throw 'Versionsnummer im Update-Manifest ist ungültig. Verwende z. B. 0.8.3.' }
     if ($remoteVersion -le $localVersion) {
         $info.message = 'ScoutLab ist auf dem aktuellen Stand.'
         return $info
@@ -288,7 +288,7 @@ function Handle-Client {
         }
 
         if ($target -eq '/health') {
-            $bytes = [System.Text.Encoding]::UTF8.GetBytes('{"ok":true,"helper":"ScoutLab Sports 0.8.1"}')
+            $bytes = [System.Text.Encoding]::UTF8.GetBytes('{"ok":true,"helper":"ScoutLab Sports 0.8.3"}')
             Send-Response $stream 200 'application/json; charset=utf-8' $bytes
             return
         }
@@ -491,15 +491,15 @@ try {
     }
     $listener.Start()
     Write-ScoutLog 'Lokaler Helfer gestartet.'
-    Write-Host 'ScoutLab Sports 0.8.1 – lokaler App- und Datenhelfer läuft.' -ForegroundColor Green
+    Write-Host 'ScoutLab Sports 0.8.3 – lokaler App- und Datenhelfer läuft.' -ForegroundColor Green
     Write-Host "Appadresse: http://127.0.0.1:$port/"
     Write-Host 'Updatequelle: Updates werden nur nach Bestätigung im App-Fenster installiert.'
     $browserProcess = Start-ScoutLabWindow
     Write-ScoutLog 'App-Fenster gestartet.'
+    # Browser-Startprozesse können sich sofort beenden, wenn Edge/Chrome
+    # das Fenster an einen bereits laufenden Browserprozess übergibt.
+    # Deshalb niemals die Lebensdauer des lokalen Servers an HasExited koppeln.
     while ($listener.Server.IsBound) {
-        if ($null -ne $browserProcess) {
-            try { $browserProcess.Refresh(); if ($browserProcess.HasExited) { Write-ScoutLog 'App-Fenster wurde geschlossen.'; break } } catch { }
-        }
         if ($listener.Pending()) {
             $client = $listener.AcceptTcpClient()
             Handle-Client -Client $client
