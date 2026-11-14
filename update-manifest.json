@@ -1,10 +1,10 @@
 {
-  "version": "0.8.1",
-  "updatedAt": "2026-11-14",
+  "version": "0.8.2",
+  "updatedAt": "2026-11-15",
   "files": [
     {
       "name": "index.html",
-      "sha256": "ed111b1aa432ab95c115cd6f2906fc8d0b2dbe72feb5577a7ae3fcad0d5ea769"
+      "sha256": "6e953d5e84978ac896153e5152e35cce52000c41555648d9a5166fc50cb473c8"
     },
     {
       "name": "broadcast_rights_database.json",
