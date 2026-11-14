@@ -1,5 +1,5 @@
 {
-  "version": "0.8.2",
+  "version": "0.8.3",
   "updatedAt": "2026-11-15",
   "files": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "name": "server.ps1",
-      "sha256": "4dadff67cef0cb40364b15ed45b69faa0b346113e815233f42c9ab24b657b859"
+      "sha256": "2599fc3a83c0b4cd55e8d87ac84f8900f316b42086acf4f7924e152a324f45e7"
     },
     {
       "name": "update_worker.ps1",
