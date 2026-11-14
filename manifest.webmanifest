@@ -1,0 +1,38 @@
+{
+  "id": "./",
+  "name": "ScoutLab Sports",
+  "short_name": "ScoutLab",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6fa",
+  "theme_color": "#14233b",
+  "description": "ScoutLab Sports – Matchcenter für Fußball, Basketball und internationale TV-Rechte.",
+  "icons": [
+    {
+      "src": "app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Spielplan aktualisieren",
+      "short_name": "Aktualisieren",
+      "url": "./?action=refresh",
+      "icons": [
+        {
+          "src": "app-icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

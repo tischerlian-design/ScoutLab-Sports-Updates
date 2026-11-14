@@ -1,0 +1,86 @@
+{
+  "version": "0.8.1",
+  "updatedAt": "2026-11-14",
+  "files": [
+    {
+      "name": "index.html",
+      "sha256": "ed111b1aa432ab95c115cd6f2906fc8d0b2dbe72feb5577a7ae3fcad0d5ea769"
+    },
+    {
+      "name": "broadcast_rights_database.json",
+      "sha256": "cf7430ce9b789d1d68aa262167fca06f07defd94f8037cb558e052759480df96"
+    },
+    {
+      "name": "sw.js",
+      "sha256": "0f99426936393b6891c74cf6d948fb1bf4e369142dafb4d0b05be4591efcdb45"
+    },
+    {
+      "name": "manifest.webmanifest",
+      "sha256": "b0415553cee702e072584b9e977fde2ea56d1d50b3200739a9d8218c22c59b25"
+    },
+    {
+      "name": "server.ps1",
+      "sha256": "4dadff67cef0cb40364b15ed45b69faa0b346113e815233f42c9ab24b657b859"
+    },
+    {
+      "name": "update_worker.ps1",
+      "sha256": "1c9ca6164431bcf38918b7f856d2167164774c9c2c8e2de1a2e8382a9bf77f39"
+    },
+    {
+      "name": "app-icon.svg",
+      "sha256": "5c1f98b61c8bea4f1248e04af559fedba87684de770914a679e3d96492f2120d"
+    },
+    {
+      "name": "app-icon-192.png",
+      "sha256": "1ebdefdfdea7d4f3b7341678d3bcc3226ae67bb3ce3f48f2b96ba42f552f776f"
+    },
+    {
+      "name": "app-icon-512.png",
+      "sha256": "696b7d7ccd3e18aea373d40ba43a2767de2eadabbe281832e63536309a5224cd"
+    },
+    {
+      "name": "app-icon.ico",
+      "sha256": "43691a401efb2b66ac3d559efd7dcb221c8e39f140806129fc062d1b138d0834"
+    },
+    {
+      "name": "START_SCOUTLAB.vbs",
+      "sha256": "dd71cc254ce2671d479b9860601cb899df841681833ed08e77d22b825d2c8479"
+    },
+    {
+      "name": "INSTALL_SCOUTLAB.vbs",
+      "sha256": "c2f431d4f65b03f80f6e68f2d344d1814dadd3941ce641c20532ccb9280005c4"
+    },
+    {
+      "name": "START_SCOUTLAB.bat",
+      "sha256": "7a2a876b798845529a2ce6617ec8d780e07a03fe0f353b8341c11b640ad6ef4f"
+    },
+    {
+      "name": "START_BROWSER.bat",
+      "sha256": "592942016dcbfc138a22d05a39afbca36c1e87ed21190ba0e8516bc7579b9e2f"
+    },
+    {
+      "name": "INSTALL_SCOUTLAB.bat",
+      "sha256": "815f9d13e836e0cca3f388abf27b9a11a96c757aca93d903792112b7dcc4d7ed"
+    },
+    {
+      "name": "CREATE_SHORTCUTS.ps1",
+      "sha256": "52eabff4c22eac5644d1c21daac0e9dacbeab43e7a79af07b04a760ed334b35a"
+    },
+    {
+      "name": "START_SCOUTLAB_DEBUG.bat",
+      "sha256": "8a6235068ae7d90aade911b331a3a14b2a9c3e6ca3ca766ceaad9f7818980096"
+    },
+    {
+      "name": "README_DE.txt",
+      "sha256": "2c5484585e497cc0558e33c93a05fdde0432bf86843feb5b43fad68b13ae1327"
+    },
+    {
+      "name": "MAKE_UPDATE_MANIFEST.ps1",
+      "sha256": "bdc83002022bab77db981883ee7f3de1cc0108fdcbc31a6ac00984fc297ed3d4"
+    },
+    {
+      "name": "PUBLISH_UPDATE.bat",
+      "sha256": "2eb220c591fd17294596f9eaa1316182698562518e774ef470176057754cf9ca"
+    }
+  ]
+}
